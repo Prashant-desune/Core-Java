@@ -1,0 +1,369 @@
+////////////////////////////////premitivedatatype////////////////////////////////////////////////
+
+package CoreJava;
+
+public class premitiveDT {
+	
+	public static void main(String[] args) {
+		int x= 5;
+		int y=7;
+		System.out.println("x is: " + x);
+		System.out.println("y is: " + y);
+		
+		byte b = 10;
+		System.out.println("b is: " + b);
+		
+		byte b2 = (byte)129;
+		System.out.println("B2 is: " + b2);
+		
+		int i=b;
+		System.out.println("i is: " + i);
+	}
+
+}
+
+
+
+
+
+
+/////////////////////////Static keyword///////////////////
+
+package CoreJava;
+
+class Student{
+	int rollNo;
+	String name;
+	static int count = 0;
+	
+	Student(int rollNo , String name){
+		this.rollNo = rollNo;
+		this.name = name;
+		count++;
+	}
+	
+	static void showCount()
+	{
+		System.out.println(count);
+	}
+}
+
+public class StaticKeyword {
+	public static void main(String[] args) {
+		
+		Student s1 = new Student(1,"Ram");
+		System.out.println(s1.count);
+		Student s2 = new Student(1,"Sita");
+		System.out.println(s2.count);
+		Student s3 = new Student(1,"Alex");
+		System.out.println(s3.count);
+		
+	}
+}
+
+
+//////////////////carstudy/////////////////////////////
+
+package CoreJava;
+
+class Car{
+	String name;
+	String color;
+	int year;
+	int maxSpeed;
+	void accelerate() {
+		System.out.println("Car is accelerating");
+	}
+}
+
+public class carStudy {
+	
+	public static void main(String[] args) {
+		
+		Car polo = new Car();
+		System.out.println(polo.name);
+		System.out.println(polo.color);
+		System.out.println(polo.year);
+		System.out.println(polo.maxSpeed);
+		
+		polo.name = "POLO";
+		polo.color = "red";
+		polo.year = 2016;
+		polo.maxSpeed = 120;
+		
+		System.out.println(polo.name);
+		System.out.println(polo.color);
+		System.out.println(polo.year);
+		System.out.println(polo.maxSpeed);
+	}
+
+}
+
+
+///////////////////chartoint//////////////////////////
+
+package CoreJava;
+
+public class chartoint {
+	
+	public static void main(String[] args) {
+		int x= 5;
+		int y=7;
+		System.out.println("x is: " + x);
+		System.out.println("y is: " + y);
+		
+		byte b = 10;
+		System.out.println("b is: " + b);
+		
+		byte b2 = (byte)129;
+		System.out.println("B2 is: " + b2);
+		
+		int i=b;
+		System.out.println("i is: " + i);
+		
+		float f = (float)5.3;
+		
+		float f2 = 5.5f;
+		
+		double d = 18.5;
+		
+		char ch = 'a';
+		System.out.println(ch);
+		
+		int a = Character.getNumericValue('a');
+		System.out.println("A is: " + a);
+		
+		char c = 'a';
+		int ax = c;
+		System.out.println(ax);
+		
+		System.out.println((int)('a'));
+		System.out.println((int)('A'));
+		
+		char c3 = 'b';
+		int e = c3 + 'a'; 
+		System.out.println("E is: " + e);
+		
+		int z = x+y;
+		
+		int p = 5;
+		int q = ++p;
+		System.out.println("P is: " + p +" Q, is: " + q);
+		
+		Integer x1 = new Integer(x);
+		System.out.println(x1);
+	}
+
+}
+
+
+///////////////////ControlFlow///////////////////////
+
+
+package CoreJava;
+
+import java.util.*;
+
+class Students{
+	String name;
+	int marks;
+	boolean checkPass() {
+//		if(marks>40) {
+//			return true;
+//		}
+//		else {
+//			return false;
+//		}
+		if(marks>=40) return true;
+		return false;
+	}
+}
+
+public class ControlFlow {
+	
+	int findMax(int a, int b, int c){
+		if(a>b)
+		{
+			if(a>c)
+			{
+				return a;
+			}
+			else {
+				return c;
+			}
+		}
+		else
+		{
+			if(b>c) {
+				return b;
+			}
+			else {
+				return c;
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		Students s1 = new Students();
+		s1.name = "Ram";
+		s1.marks = 80;
+		
+		Students s2 = new Students();
+		s2.name = "Stam";
+		s2.marks = 80;
+		
+		System.out.println(s1.checkPass());
+		System.out.println(s2.checkPass());
+		
+		ControlFlow cf = new ControlFlow();
+		System.out.println(cf.findMax(10, 7, 15));
+//		Scanner sc = new Scanner(System.in);
+		
+		char c = 'a';
+		switch(c)
+		{
+		case 'a':
+			System.out.println("HI I am A");
+			break;
+			
+		case 'b':
+			System.out.println("HI I am B");
+			break;
+			
+		case 'c':
+			System.out.println("HI I am C");
+			break;
+			
+		default:
+			System.out.println("I am not A,B and C;");
+		}
+		
+		System.out.println("After Switch");
+	}
+
+}
+
+
+////////////////////FinalKeyword//////////////////////
+
+package CoreJava;
+
+class a{
+	final int nopfalphabate=5;
+	final int noofdigit;
+	a(){
+		noofdigit=10;
+	}
+	final void fun()
+	{
+		System.out.println("Hi, i am function in class A");
+	}
+}
+
+
+class B extends A{
+//	void fun() {
+//		System.out.println("Hi, i am function in class A");
+//	}
+}
+
+//class C extends B{
+//	
+//}
+public class FinalKeyword {
+
+}
+
+
+////////////////////Inheritance////////////////////////
+
+
+package CoreJava;
+
+class A{
+	int a,b;
+	
+	public void show() {
+		System.out.println("Hello!");
+	}
+}
+
+//class B extends A{
+//	public void speak() {
+//		System.out.println("Writing!");
+//	}
+//}
+
+interface b{
+	public void eat();
+}
+
+interface D extends b{
+	public void sleep();
+}
+class C implements b,D{
+	int e,f;
+	public void speak() {
+		System.out.println("Speaking");
+	}
+	
+	@Override
+	public void eat() {
+		
+	}
+	
+	@Override
+	public void sleep() {
+		
+	}
+}
+
+public class Inheritance {
+	
+	public static void main(String[] args) {
+//		B b = new B();
+//		C c = new C();
+	}
+	
+
+}
+
+
+///////////////////Operatorsandoperands//////////////////
+
+package CoreJava;
+
+public class operatorandoperands {
+	
+	public static void main(String[] args) {
+		int x= 5;
+		int y=7;
+		System.out.println("x is: " + x);
+		System.out.println("y is: " + y);
+		
+		byte b = 10;
+		System.out.println("b is: " + b);
+		
+		byte b2 = (byte)129;
+		System.out.println("B2 is: " + b2);
+		
+		int i=b;
+		System.out.println("i is: " + i);
+		
+		float f = (float)5.3;
+		
+		float f2 = 5.5f;
+		
+		double d = 18.5;
+		
+		char ch = 'a';
+		System.out.println(ch);
+		
+		int z = x+y;
+		
+		int p = 5;
+		int q = ++p;
+		System.out.println("P is: " + p +" Q, is: " + q);
+	}
+
+}
